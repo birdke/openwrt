@@ -14,11 +14,4 @@
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
-echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
-echo 'src-git small https://github.com/kenzok8/small' >>feeds.conf.default
-echo 'src-git istore https://github.com/linkease/istore;main' >>feeds.conf.default
-
-git pull
-./scripts/feeds clean
-./scripts/feeds update istore
-./scripts/feeds install -d y -p istore luci-app-store
+echo 'src-git smpackage https://github.com/kenzok8/small-package' >>feeds.conf.default
